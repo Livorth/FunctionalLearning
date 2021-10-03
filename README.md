@@ -5,3 +5,5 @@
 分页插件的使用:[https://github.com/Livorth/FunctionalLearning/blob/main/MarkDown/分页插件的使用.md](https://github.com/Livorth/FunctionalLearning/blob/main/MarkDown/分页插件的使用.md)
 
 统一异常处理类:[https://github.com/Livorth/FunctionalLearning/blob/main/MarkDown/统一异常处理类.md](https://github.com/Livorth/FunctionalLearning/blob/main/MarkDown/统一异常处理类.md)
+
+AOP日志管理：[https://github.com/Livorth/FunctionalLearning/blob/main/MarkDown/AOP日志管理.md](https://github.com/Livorth/FunctionalLearning/blob/main/MarkDown/AOP日志管理.md)
