@@ -1,5 +1,6 @@
 package cn.livorth.functionallearning.controller;
 
+import cn.livorth.functionallearning.common.log.LogAnnotation;
 import cn.livorth.functionallearning.entity.User;
 import cn.livorth.functionallearning.handler.exception.CustomException;
 import cn.livorth.functionallearning.service.UserService;
@@ -23,8 +24,9 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @LogAnnotation(logModule = "user", logType = "select",  logDescription = "获取所有用户信息")
     @GetMapping
-    public List<User> categories(){
+    public List<User> getAllUser(){
         return userService.getAllUser();
     }
 
@@ -34,6 +36,7 @@ public class UserController {
      * @param pageSize 每页多少个
      * @return
      */
+    @LogAnnotation(logModule = "user", logType = "select",  logDescription = "通过分页获取所有用户信息")
     @GetMapping("page/{thePage}/{pageSize}")
     public List<User> getAllUserByPage(@PathVariable("thePage") int thePage, @PathVariable("pageSize") int pageSize){
         Page<User> page = new Page<>(thePage, pageSize);

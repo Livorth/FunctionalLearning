@@ -9,7 +9,7 @@
         <result column="password" property="password"/>
     </resultMap>
 
-    <select id="listArticle" resultType="cn.livorth.functionallearning.entity.User">
+    <select id="getAllUserByPage" resultType="cn.livorth.functionallearning.entity.User">
         select * FROM user
     </select>
 
