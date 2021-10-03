@@ -1,9 +1,11 @@
 package cn.livorth.functionallearning.controller;
 
 import cn.livorth.functionallearning.entity.User;
+import cn.livorth.functionallearning.handler.exception.CustomException;
 import cn.livorth.functionallearning.service.UserService;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -37,4 +39,18 @@ public class UserController {
         Page<User> page = new Page<>(thePage, pageSize);
         return userService.getAllUserByPage(page);
     }
+
+    @GetMapping("testExceptionHandler")
+    public List<User> testExceptionHandler() throws Exception {
+//        int a = 1 / 0;
+        throw new Exception();
+    }
+
+
+    @GetMapping("testCustomException")
+    public List<User> testCustomException() throws Exception {
+        throw new CustomException(505, "这里是自定义异常");
+    }
+
+
 }
