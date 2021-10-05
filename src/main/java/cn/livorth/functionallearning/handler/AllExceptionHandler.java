@@ -22,12 +22,12 @@ public class AllExceptionHandler {
      * 进行异常处理，处理Exception.class的异常
      * 然后返回的是json类型的数据
      */
-    @ExceptionHandler(Exception.class)
-    @ResponseBody
-    public ResultDTO doAllException(Exception e){
-        log.info("出现了异常：" + e.getMessage());
-        return ResultDTO.byErrorCode(ErrorCode.SYSTEM_ERROR);
-    }
+//    @ExceptionHandler(Exception.class)
+//    @ResponseBody
+//    public ResultDTO doAllException(Exception e){
+//        log.info("出现了异常：" + e.getMessage());
+//        return ResultDTO.byErrorCode(ErrorCode.SYSTEM_ERROR);
+//    }
 
     /**
      * 拦截参数校验异常

@@ -1,5 +1,6 @@
 package cn.livorth.functionallearning.controller;
 
+import cn.livorth.functionallearning.common.cache.RedisCache;
 import cn.livorth.functionallearning.common.log.LogAnnotation;
 import cn.livorth.functionallearning.entity.User;
 import cn.livorth.functionallearning.handler.exception.CustomException;
@@ -37,6 +38,7 @@ public class UserController {
      * @return
      */
     @LogAnnotation(logModule = "user", logType = "select",  logDescription = "通过分页获取所有用户信息")
+    @RedisCache(nameSpace = "user", key = "getAllUserByPage")
     @GetMapping("page/{thePage}/{pageSize}")
     public List<User> getAllUserByPage(@PathVariable("thePage") int thePage, @PathVariable("pageSize") int pageSize){
         Page<User> page = new Page<>(thePage, pageSize);
