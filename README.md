@@ -9,3 +9,5 @@
 AOP日志管理：[https://github.com/Livorth/FunctionalLearning/blob/main/MarkDown/AOP日志管理.md](https://github.com/Livorth/FunctionalLearning/blob/main/MarkDown/AOP日志管理.md)
 
 SpringBoot整合Druid：[https://github.com/Livorth/FunctionalLearning/blob/main/MarkDown/SpringBoot整合Druid.md](https://github.com/Livorth/FunctionalLearning/blob/main/MarkDown/SpringBoot整合Druid.md)
+
+SpringBoot整合Redis：[https://github.com/Livorth/FunctionalLearning/blob/main/MarkDown/SpringBoot整合Redis.md](https://github.com/Livorth/FunctionalLearning/blob/main/MarkDown/SpringBoot整合Redis.md)
