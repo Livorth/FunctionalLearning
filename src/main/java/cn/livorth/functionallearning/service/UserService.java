@@ -25,4 +25,16 @@ public interface UserService {
      */
     List<User> getAllUserByPage(Page<User> page);
 
+    /**
+     * 将所有的用户信息存入缓存
+     * @return
+     */
+    Boolean setAllUserInCacheById(int id);
+
+    /**
+     * 在缓存中获取全部的用户信息数据
+     * @return
+     */
+    User getAllUserByCacheById(int id);
+
 }

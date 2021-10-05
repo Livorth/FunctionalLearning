@@ -55,5 +55,15 @@ public class UserController {
         throw new CustomException(505, "这里是自定义异常");
     }
 
+    @GetMapping("setInCache/{id}")
+    public Boolean setAllUserInCacheById(@PathVariable("id") int id){
+        return userService.setAllUserInCacheById(id);
+    }
+
+    @GetMapping("getInCache/{id}")
+    public User getAllUserInCacheById(@PathVariable("id") int id){
+        return userService.getAllUserByCacheById(id);
+    }
+
 
 }
