@@ -16,7 +16,7 @@ class FunctionalLearningApplicationTests {
     void redisTestStringSet(){
         strRedis.opsForValue().set("RedisTest", "Test");
         strRedis.opsForValue().set("RedisTest中文", "中文测试");
-
+        strRedis.opsForValue().set("RedisTest繁體測試", "繁體测试");
     }
 
     @Test
